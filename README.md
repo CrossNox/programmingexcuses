@@ -26,3 +26,8 @@ try:
 except:
 	raise RandomExcuseError()
 ```
+
+Also, from a terminal:
+```bash
+programmingexcuse
+```
