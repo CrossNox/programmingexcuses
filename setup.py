@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='programmingexcuses',
-      version='0.1',
+      version='0.1.2',
       description='Tired of making up your own excuses?',
       long_description=readme(),
       url='https://github.com/crossnox/programmingexcuses',
