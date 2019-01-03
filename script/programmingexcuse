@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+from programmingexcuses import get_excuse
+
+if __name__ == "__main__":
+    print(get_excuse())
