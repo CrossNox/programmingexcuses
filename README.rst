@@ -12,9 +12,6 @@ Installing
 Testing
 =======
 
-There are no tests! I was gonna make up an excuse for that but this
-package does it for me :D
-
 .. code:: bash
 
    $ programmingexcuse
@@ -27,14 +24,14 @@ It’s quite simple:
 
 .. code:: python
 
-   import programmingexcuses
-   print(programming_excuses.get_excuse())
+   from programmingexcuses import get_excuse
+   print(get_excuse())
 
 And, for convenience:
 
 .. code:: python
 
-   import programmingexcuses
+   from programmingexcuses import RandomExcuseError
    try:
        ...
    except:
