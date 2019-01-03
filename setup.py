@@ -8,5 +8,9 @@ setup(name='programmingexcuses',
       author='CrossNox',
       packages=['programmingexcuses'],
       scripts=['script/programmingexcuse'],
-      install_requires=['requests', 'bs4']
+      install_requires=['requests', 'bs4'],
+      classifiers=[
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3'
+      ]
     )

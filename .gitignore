@@ -1,4 +1,5 @@
 venv/
+build/
 
 # Compiled python modules.
 *.pyc
