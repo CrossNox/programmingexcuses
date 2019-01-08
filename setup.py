@@ -1,20 +1,18 @@
 from setuptools import setup
 
-
 def readme():
     with open('README.rst') as f:
         return f.read()
 
 
-setup(name='programmingexcuses',
-      version='0.1.2',
-      description='Tired of making up your own excuses?',
+setup(name='obliquestrategies',
+      version='0.2',
+      description='Over One Hundred Worthwhile Dilemmas',
       long_description=readme(),
-      url='https://github.com/crossnox/programmingexcuses',
-      author='CrossNox',
-      packages=['programmingexcuses'],
-      scripts=['script/programmingexcuse'],
-      install_requires=['requests', 'bs4'],
+      url='https://github.com/FdelMazo/obliquestrategies',
+      author='FdelMazo',
+      packages=['obliquestrategies'],
+      scripts=['script/obliquestrategies'],
       classifiers=[
           'Programming Language :: Python :: 2',
           'Programming Language :: Python :: 3'
