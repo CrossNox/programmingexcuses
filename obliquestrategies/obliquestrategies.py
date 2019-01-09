@@ -1,10 +1,10 @@
 from random import randint
 import os.path
 
-EDITIONS = {1: 'edition_1_1975.py',
-            2: 'edition_2_1978.py',
-            3: 'edition_3_1979.py',
-            4: 'edition_4_1996.py'}
+EDITIONS = {1: 'edition_1_1975.txt',
+            2: 'edition_2_1978.txt',
+            3: 'edition_3_1979.txt',
+            4: 'edition_4_1996.txt'}
 
 EDITIONS_ALIAS = {1975: 1, 1978: 2, 1979: 3, 1996: 4}
 
@@ -47,7 +47,7 @@ def get_strategy(edition='any'):
     elif edition not in EDITIONS:
         raise ValueError("Unknown edition: {}".format(edition))
     module = os.path.abspath(os.path.dirname(__file__))
-    filepath = os.path.join(module, EDITIONS[edition])
+    filepath = os.path.join(module, 'resources', EDITIONS[edition])
     with open(filepath) as deck:
         card_number = randint(0, ALL_EDITIONS_LENS[edition - 1])
         for _ in range(1, card_number - 1):
