@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 
 from obliquestrategies import get_strategy
+import argparse
+
+
+def valid_edition(v):
+    if v not in [1, 2, 3, 4] and v != 'any' and v not in [1975, 1978, 1979, 1996]:
+        msg = "Not a valid edition: '{}'.".format(v)
+        raise argparse.ArgumentTypeError(msg)
+    return v
+
 
 if __name__ == "__main__":
-    print(get_strategy())
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--edition', '-e', type=valid_edition, required=False, default='any')
+    args = parser.parse_args()
+    print(get_strategy(args.edition))
