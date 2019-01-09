@@ -4,10 +4,21 @@ from obliquestrategies import get_strategy
 import argparse
 
 
+def valid_edition(s):
+    if s == 'any':
+        return s
+    try:
+        return int(s)
+    except ValueError:
+        msg = "Not a valid edition: '{}'.".format(s)
+        raise argparse.ArgumentTypeError(msg)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--edition', '-e',
                         required=False,
+                        type=valid_edition,
                         default='any',
                         help='Edition to choose a strategy from',
                         choices=(1, 2, 3, 4, 1975, 1978, 1979, 1996, 'any'))
